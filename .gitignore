@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 .idea/
 
+=======
+>>>>>>> fb32c913d88a5797b2ab52a397e1c95864bafb56
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -100,4 +103,8 @@ ENV/
 /site
 
 # mypy
+<<<<<<< HEAD
 .mypy_cache/
+=======
+.mypy_cache/
+>>>>>>> fb32c913d88a5797b2ab52a397e1c95864bafb56
