@@ -11,4 +11,10 @@ import scrapy
 class WarrantItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    code = scrapy.Field()
+    name = scrapy.Field()
+    price = scrapy.Field()
+    excise_price = scrapy.Field()
+    ratio = scrapy.Field()
+    expiration_date = scrapy.Field()
     pass

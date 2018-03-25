@@ -64,9 +64,11 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'warrant.pipelines.WarrantPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'warrant.pipelines.MongoPipeline': 300,
+}
+MONGO_URI = "127.0.0.1:27017"
+MONGO_DATABASE = "warrant"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
