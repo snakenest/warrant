@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ "warrant" }}</title>
+</head>
+<body>
+    <h3>{{"warrant price sheet"}}</h3>
+    <div>{{"filered and ordered"}}</div>
+    <ul>
+        {% for joke in p_jokes %}
+        <li>{{ joke.code }} :{{ joke.name }} :{{ joke.price }}
+         :{{ joke.excise_price }} :{{ joke.ratio }} :{{ joke.expiration_date }}:{{ joke.breakeven_point }}:{{ joke.earnings_24 }}</li>
+        {% endfor %}
+    </ul>
+    <hr />
+</body>
+</html>
