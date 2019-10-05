@@ -13,7 +13,7 @@ BOT_NAME = 'warrant'
 
 SPIDER_MODULES = ['warrant.spiders']
 NEWSPIDER_MODULE = 'warrant.spiders'
-
+HTTPERROR_ALLOWED_CODES = [400]
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER'

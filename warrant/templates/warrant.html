@@ -2,17 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <title>{{ "warrant" }}</title>
 </head>
 <body>
     <h3>{{"warrant price sheet"}}</h3>
     <div>{{"filered and ordered"}}</div>
-    <ul>
-        {% for joke in p_jokes %}
-        <li>{{ joke.code }} :{{ joke.name }} :{{ joke.price }}
-         :{{ joke.excise_price }} :{{ joke.ratio }} :{{ joke.expiration_date }}:{{ joke.breakeven_point }}:{{ joke.earnings_24 }}</li>
-        {% endfor %}
-    </ul>
-    <hr />
+    <div class="row">
+        <div class="col-md-9 col-sm-12 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>evergrand</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <td>{{ "code" }}</td>
+                                <td>{{ "name" }}</td>
+                                <td>{{ "current" }}</td>
+                                <td>{{ "strike_price" }}</td>
+                                <td>{{ "conversion_ratio" }}</td>
+                                <td>{{ "outstanding_ratio" }}</td>
+                                <td>{{ "expiration_date" }}</td>
+                                <td>{{ "breakeven_point" }}</td>
+                                <td>{{ "earnings_24" }}</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for joke in p_jokes %}
+                                <tr>
+                                    <td>{{ joke.code }}</td>
+                                    <td>{{ joke.name }}</td>
+                                    <td>{{ joke.current }}</td>
+                                    <td>{{ joke.strike_price }}</td>
+                                    <td>{{ joke.conversion_ratio }}</td>
+                                    <td>{{ joke.outstanding_ratio }}</td>
+                                    <td>{{ joke.expiration_date }}</td>
+                                    <td>{{ joke.breakeven_point }}</td>
+                                    <td>{{ joke.earnings_24 }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<span>{{ "code" }}</span><span>{{ "name" }}</span><span>{{ "current" }}</span><span>{{ "strike_price" }}</span><span>{{ "conversion_ratio" }}</span>-->
+            <!--<span>{{ "outstanding_ratio" }}</span><span>{{ "expiration_date" }}</span><span>{{ "breakeven_point" }}</span><span>{{ "earnings_24" }}</span>-->
+        <!--</li>-->
+        <!--{% for joke in p_jokes %}-->
+        <!--<li>-->
+            <!--<span>{{ joke.code }}</span><span>{{ joke.name }}</span><span>{{ joke.current }}</span><span>{{ joke.strike_price }}</span><span>{{ joke.conversion_ratio }}</span>-->
+            <!--<span>{{ joke.outstanding_ratio }}</span><span>{{ joke.expiration_date }}</span><span>{{ joke.breakeven_point }}</span><span>{{ joke.earnings_24 }}</span>-->
+        <!--</li>-->
+        <!--{% endfor %}-->
+    <!--</ul>-->
+    <!--<hr />-->
 </body>
 </html>

@@ -16,6 +16,7 @@ class WarrantItem(scrapy.Item):
     price = scrapy.Field()
     excise_price = scrapy.Field()
     ratio = scrapy.Field()
+    outstanding_ratio = scrapy.Field()
     expiration_date = scrapy.Field()
     breakeven_point = scrapy.Field()
     earnings_24 = scrapy.Field()

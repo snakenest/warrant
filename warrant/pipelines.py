@@ -29,7 +29,7 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        #pdb.set_trace()
+        # pdb.set_trace()
         collection_name = item.__class__.__name__
         self.db[collection_name].insert(dict(item))
         return item
